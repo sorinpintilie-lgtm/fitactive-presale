@@ -85,12 +85,11 @@ export default function FitActivePresale() {
               <div className="animate-slideInUp">
                 <h1 className="text-4xl font-bold tracking-tight md:text-6xl leading-tight">
                   S-a deschis <span className="text-[var(--brand)] drop-shadow-lg">FitActive Vitan</span> —
-                  <br className="hidden md:block" /> primul club 24/7 cu abonament All Inclusive la jumătate de preț!
+                  <br className="hidden md:block" /> Club deschis 24/7 cu abonament All Inclusive. Doar acum cu 61% discount pentru primii membri. Nu rata oferta!
                 </h1>
                 <p className="mt-6 text-lg text-neutral-300 leading-relaxed">
-                  Doar acum, în perioada de presale:
-                  <span className="ml-2 font-bold text-[var(--brand)]">99,90 lei/lună (plată anuală)</span> +
-                  <span className="ml-2 font-bold text-[var(--brand)]">Pro‑Pack cadou (500 lei)</span>
+                  <span className="font-bold text-[var(--brand)]">99,90 lei/lună (plată anuală)</span> +
+                  <span className="ml-2 font-bold text-[var(--brand)]">Pro‑Pack cadou</span>
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <button
@@ -140,11 +139,11 @@ export default function FitActivePresale() {
                 <h3 className="text-2xl font-bold">Bonus exclusiv în presale: <span className="text-[var(--brand)]">Pro‑Pack gratuit</span></h3>
                 <p className="mt-3 text-neutral-400">Primești mai mult decât un abonament – primești un plan.</p>
                 <div className="mt-6 grid gap-4 md:grid-cols-3">
-                  <Card title="Analiză corporală">Compoziție, masă musculară, procent grăsime.</Card>
-                  <Card title="Control postural (osteopat)">Previi dureri și accidentări.</Card>
-                  <Card title="Antrenament personalizat">Plan de start 1‑la‑1 inclus.</Card>
+                  <Card title="Analiză corporală">Compoziție, masă musculară, procent grăsime. - Valoare 450 RON</Card>
+                  <Card title="Control postural (osteopat)">Previi dureri și accidentări. Valoare 700 RON</Card>
+                  <Card title="Antrenament personalizat">Plan de start 1‑la‑1 inclus. Valoare 300 RON</Card>
                 </div>
-                <p className="mt-6 text-sm text-neutral-500">Valoare totală: <span className="font-semibold text-[var(--brand)]">500 lei</span> — oferit <span className="font-semibold text-[var(--brand)]">GRATUIT</span> doar în presale. După lansare, disponibil separat, contra cost.</p>
+                <p className="mt-6 text-sm text-neutral-500">Valoare totală: <span className="font-semibold text-[var(--brand)]">1.450 lei</span> — oferit <span className="font-semibold text-[var(--brand)]">GRATUIT</span> doar în presale. După lansare, disponibil separat, contra cost.</p>
                 <div className="mt-8">
                   <button onClick={scrollToCheckout} className="w-full rounded-xl bg-[var(--brand)] px-6 py-3 font-bold text-white shadow-lg hover:bg-[var(--brand-dark)] transition-all duration-300 hover:shadow-xl active:scale-95">Vreau Pro‑Pack‑ul gratuit</button>
                 </div>
@@ -203,17 +202,34 @@ export default function FitActivePresale() {
               <h2 className="text-3xl font-bold md:text-4xl">Întrebări frecvente</h2>
               <div className="mt-8 divide-y divide-neutral-800">
                 <Faq q="Ce include All Inclusive?">
-                  Acces 24/7, clase fără rezervare, băuturi izotonice și apă, fotolii de masaj, platformă vibratoare și acces la solar.
+                  <>
+                    <ul className="space-y-2 list-disc list-inside">
+                      <li>Acces în sala de fitness, 24h / 7 zile pe săptămână</li>
+                      <li>Toate cursurile noastre distractive de grup</li>
+                      <li>Băuturile noastre izotonice cu puține calorii</li>
+                      <li>Solar cu Colagen</li>
+                      <li>Aparate cu vibromasaj anticelulită și pentru relaxare musculară</li>
+                      <li>Fotolii pentru masaj relaxant</li>
+                    </ul>
+                    <p className="mt-3">
+                      Dacă achiziționezi acum în perioada de presale, toate aceste servicii vor rămâne incluse timp de 12 luni, chiar dacă, după finalul presale-ului, ele vor deveni servicii opționale cu plată separată.
+                    </p>
+                  </>
                 </Faq>
                 <Faq q="Cum funcționează Pro‑Pack‑ul?">
                   După înscriere, te programăm pentru analiză corporală, control postural cu un osteopat și un antrenament 1‑la‑1 pentru planul tău de start.
                 </Faq>
                 <Faq q="Oferta e limitată?">
-                  Da, este valabilă doar în perioada de presale și doar pentru primii membri. După deschidere, Pro‑Pack va fi disponibil separat, contra cost.
+                  Da, este valabilă doar în perioada de presale și doar pentru primii membri. După deschidere, Pro-Pack va fi disponibil separat, contra cost. Grăbește-te! Locurile sunt limitate, iar oferta All Inclusive pentru 12 luni dispare imediat ce atingem numărul maxim de pachete oferite cu această ofertă.
                 </Faq>
                 <Faq q="Când pot începe?">
                   <>
                     Poți merge în oricare altă sală FitActive imediat după plată. În Vitan, abonamentul începe la data deschiderii — nu pierzi nimic până atunci.
+                  </>
+                </Faq>
+                <Faq q="Am deja abonament anual plătit la o altă sală. Cum pot să beneficiez de oferta All Inclusive acum fără să o pierd dacă am abonament altundeva?">
+                  <>
+                    Dacă ne arăți că ai un abonament activ și plătit la o altă sală, îți oferim până la 6 luni gratuite! De exemplu, dacă mai ai 4 luni rămase din abonamentul actual, cumpără acum abonamentul FitActive și beneficiezi imediat de toate avantajele perioadei de presale și de oferta All Inclusive pentru 12 luni. Noi îți adăugăm gratuit cele 4 luni rămase din vechiul abonament — deci vei avea în total 16 luni de All Inclusive. Totul inclus. Fără pierderi.
                   </>
                 </Faq>
               </div>
@@ -223,7 +239,7 @@ export default function FitActivePresale() {
           <section className="border-t border-neutral-800 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 text-white">
             <div className="mx-auto max-w-6xl px-4 py-20 text-center">
               <h2 className="text-4xl font-bold md:text-5xl">Ultima șansă la 61% reducere</h2>
-              <p className="mx-auto mt-4 max-w-2xl text-neutral-400 text-lg">Ești la un click distanță de cel mai bun preț FitActive + Pro‑Pack cadou (500 lei).</p>
+              <p className="mx-auto mt-4 max-w-2xl text-neutral-400 text-lg">Ești la un click distanță de cel mai bun preț FitActive + Pro‑Pack cadou (1.450 lei).</p>
               <button
                 onClick={scrollToCheckout}
                 className="mt-8 rounded-xl bg-[var(--brand)] px-8 py-4 font-bold text-white shadow-xl hover:bg-[var(--brand-dark)] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:scale-95"
@@ -256,7 +272,7 @@ export default function FitActivePresale() {
                   <li className="flex items-center gap-2"><span className="text-[var(--brand)] font-bold">✔</span> Băuturi izotonice și apă incluse</li>
                   <li className="flex items-center gap-2"><span className="text-[var(--brand)] font-bold">✔</span> Fotolii de masaj & platformă vibratoare</li>
                   <li className="flex items-center gap-2"><span className="text-[var(--brand)] font-bold">✔</span> Acces la solar</li>
-                  <li className="flex items-center gap-2"><span className="text-[var(--brand)] font-bold">✔</span> Pro‑Pack de start (500 lei) — gratuit în presale</li>
+                  <li className="flex items-center gap-2"><span className="text-[var(--brand)] font-bold">✔</span> Pro‑Pack de start (1.450 lei) — gratuit în presale</li>
                 </ul>
                 <div className="mt-10 flex flex-col items-stretch gap-3 md:flex-row md:items-center">
                   <a
@@ -285,34 +301,53 @@ export default function FitActivePresale() {
           </section>
 
           <footer className="border-t border-neutral-800 bg-neutral-950">
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-12 md:grid-cols-3">
-              <div>
-                <div className="text-lg font-bold text-[var(--brand)]">FitActive București Vitan</div>
-                <div className="mt-2 text-sm text-neutral-500">Primul brand de fitness din Italia extins în România. Deschis 24/7.</div>
-              </div>
-              <div className="text-sm text-neutral-400">
-                <div className="font-semibold text-neutral-200">Companie</div>
-                <div>FITNESS VITAN SRL</div>
-                <div>CUI: 49908807</div>
-                <div>J40/7487/2024</div>
-                <div>Calea Vitan nr. 289, sector 3, București</div>
-              </div>
-              <div className="text-sm text-neutral-400">
-                <div className="font-semibold text-neutral-200">Contact</div>
+            <div className="mx-auto max-w-6xl px-4 py-12">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
                 <div>
-                  Email: <a className="text-[var(--brand)] hover:underline transition-all" href="mailto:vitan@fitactive.ro">vitan@fitactive.ro</a>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-[var(--brand)] flex-shrink-0"></div>
+                    <div className="text-xl font-bold text-white">FitActive București<br/>Vitan</div>
+                  </div>
+                  <div className="text-sm text-neutral-400">Primul brand de fitness din Italia extins în România. Deschis 24/7.</div>
                 </div>
-                <div>
-                  Telefon: <a className="text-[var(--brand)] hover:underline transition-all" href="tel:0758987111">0758 987 111</a>
+                <div className="text-sm text-neutral-400">
+                  <div className="font-semibold text-white mb-3">Companie</div>
+                  <div>FITNESS VITAN SRL</div>
+                  <div>CUI: 49908807</div>
+                  <div>Nr. Registrul Comerțului:</div>
+                  <div>J40/7487/2024</div>
+                  <div>Sediu: Calea Vitan nr. 289,</div>
+                  <div>sector 3, București</div>
                 </div>
-                <div className="mt-3 space-x-3">
-                  <a href="#" className="text-neutral-500 hover:text-[var(--brand)] transition-all">Termeni & Condiții</a>
-                  <a href="#" className="text-neutral-500 hover:text-[var(--brand)] transition-all">Politica de confidențialitate</a>
-                  <a href="#" className="text-neutral-500 hover:text-[var(--brand)] transition-all">Politica cookie</a>
+                <div className="text-sm text-neutral-400">
+                  <div className="font-semibold text-white mb-3">Contact</div>
+                  <div>Adresa: Calea Vitan nr. 289,</div>
+                  <div>sector 3, București</div>
+                  <div className="mt-3">
+                    Email: <a className="text-white hover:text-[var(--brand)] transition-all" href="mailto:vitan@fitactive.ro">vitan@fitactive.ro</a>
+                  </div>
+                  <div>
+                    Telefon: <a className="text-white hover:text-[var(--brand)] transition-all" href="tel:0758987111">0758987111</a>
+                  </div>
+                </div>
+                <div className="text-sm text-neutral-400">
+                  <div className="font-semibold text-white mb-3">Legal</div>
+                  <div className="space-y-2">
+                    <div><a href="#" className="text-neutral-400 hover:text-[var(--brand)] transition-all">Termeni & Condiții</a></div>
+                    <div><a href="#" className="text-neutral-400 hover:text-[var(--brand)] transition-all">Politica de confidențialitate</a></div>
+                    <div><a href="#" className="text-neutral-400 hover:text-[var(--brand)] transition-all">Politica cookie</a></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="border-t border-neutral-800 py-5 text-center text-xs text-neutral-600">© 2025 FitActive. Toate drepturile rezervate.</div>
+            <div className="border-t border-neutral-800 py-6">
+              <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="text-sm text-neutral-500">© 2025 FitActive. Toate drepturile rezervate.</div>
+                <div className="flex items-center gap-4">
+                  <NetopiaPaymentsLogo className="h-8" />
+                </div>
+              </div>
+            </div>
           </footer>
         </div>
 
@@ -394,5 +429,26 @@ function NetopiaIcon({ className = "h-5 w-5" }: { className?: string }) {
       <rect x="7.5" y="9.5" width="3" height="3" rx="0.5" />
       <rect x="12.5" y="9.5" width="4" height="1.5" rx="0.5" />
     </svg>
+  );
+}
+
+function NetopiaPaymentsLogo({ className = "h-8" }: { className?: string }) {
+  return (
+    <div className={`${className} flex items-center gap-3`}>
+      <svg className="h-full" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="20" fill="white" fontSize="14" fontWeight="bold" fontFamily="Arial, sans-serif">NETOPIA</text>
+        <text x="0" y="35" fill="white" fontSize="10" fontWeight="600" fontFamily="Arial, sans-serif" letterSpacing="2">PAYMENTS</text>
+      </svg>
+      <div className="flex items-center gap-2">
+        <svg className="h-6 w-10" viewBox="0 0 40 24" fill="none">
+          <circle cx="15" cy="12" r="10" fill="#EB001B"/>
+          <circle cx="25" cy="12" r="10" fill="#F79E1B"/>
+        </svg>
+        <svg className="h-6 w-12" viewBox="0 0 48 24" fill="none">
+          <rect width="48" height="24" rx="2" fill="#1A1F71"/>
+          <text x="6" y="17" fill="white" fontSize="14" fontWeight="bold" fontFamily="Arial, sans-serif" fontStyle="italic">VISA</text>
+        </svg>
+      </div>
+    </div>
   );
 }
