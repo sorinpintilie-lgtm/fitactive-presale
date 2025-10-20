@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #ec7c26;
+  --brand-dark: #d46a1a;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.15;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.08;
+  }
+  50% {
+    transform: translateY(-30px) translateX(-15px);
+    opacity: 0.12;
+  }
+}
+
+@keyframes float-slower {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.06;
+  }
+  50% {
+    transform: translateY(-15px) translateX(20px);
+    opacity: 0.1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(236, 124, 38, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(236, 124, 38, 0.6);
+  }
+}
+
+.floating-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ec7c26, #d46a1a);
+  filter: blur(40px);
+}
+
+.floating-element:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 10%;
+  animation: float 20s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: 10%;
+  animation: float-slow 25s ease-in-out infinite;
+}
+
+.floating-element:nth-child(3) {
+  width: 250px;
+  height: 250px;
+  bottom: 10%;
+  left: 50%;
+  animation: float-slower 30s ease-in-out infinite;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Smooth transitions and animations */
+* {
+  @apply transition-all duration-300;
+}
+
+button, a {
+  @apply transition-all duration-300 ease-out;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.6s ease-out forwards;
+}
