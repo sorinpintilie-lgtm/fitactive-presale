@@ -1,5 +1,40 @@
 import React, { useEffect, useMemo, useState } from "react";
 
+function ImageModal({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleEscape);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 animate-fadeIn"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 text-white text-4xl hover:text-[var(--brand)] transition-colors"
+        aria-label="Close"
+      >
+        ×
+      </button>
+      <img
+        src={src}
+        alt={alt}
+        className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  );
+}
+
 function useCountdown(targetISO: string) {
   const target = useMemo(() => new Date(targetISO).getTime(), [targetISO]);
   const [now, setNow] = useState<number>(() => Date.now());
@@ -18,6 +53,7 @@ function useCountdown(targetISO: string) {
 
 export default function FitActivePresale() {
   const { d, h, m, s, expired } = useCountdown("2025-10-31T21:00:00+03:00");
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const CHECKOUT_URL = "https://presale.fitactive.ro/checkout";
   const BRAND = { primary: "#ec7c26", dark: "#d46a1a" };
@@ -26,6 +62,13 @@ export default function FitActivePresale() {
     const el = document.getElementById("checkout");
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  const gymImages = [
+    { src: "/gym-1.png", alt: "Atmosferă prietenoasă în sala FitActive" },
+    { src: "/gym-2.png", alt: "Aparate moderne de fitness" },
+    { src: "/gym-3.png", alt: "Antrenament în echipă" },
+    { src: "/gym-4.png", alt: "Spații aerisite și curate" }
+  ];
 
   return (
     <div
@@ -174,8 +217,18 @@ export default function FitActivePresale() {
               <h2 className="text-3xl font-bold md:text-4xl">Atmosferă prietenoasă, aparate moderne</h2>
               <p className="mt-3 text-neutral-400">Curățenie impecabilă, spații aerisite și personal gata să te ajute.</p>
               <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="aspect-[4/3] overflow-hidden rounded-xl bg-neutral-900 ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 hover:scale-105" />
+                {gymImages.map((image, i) => (
+                  <div
+                    key={i}
+                    className="aspect-[4/3] overflow-hidden rounded-xl bg-neutral-900 ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 hover:scale-105 cursor-pointer"
+                    onClick={() => setSelectedImage(image)}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 ))}
               </div>
               <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -232,9 +285,7 @@ export default function FitActivePresale() {
                   Da, este valabilă doar în perioada de presale și doar pentru primii membri. După deschidere, Pro-Pack va fi disponibil separat, contra cost. Grăbește-te! Locurile sunt limitate, iar oferta All Inclusive pentru 12 luni dispare imediat ce atingem numărul maxim de pachete oferite cu această ofertă.
                 </Faq>
                 <Faq q="Când pot începe?">
-                  <>
-                    Poți merge în oricare altă sală FitActive imediat după plată. În Vitan, abonamentul începe la data deschiderii — nu pierzi nimic până atunci.
-                  </>
+                  Plătești azi, vii azi! Abonamentul tău începe imediat — doar treci pe la recepție și îți ridici cardul de acces.
                 </Faq>
                 <Faq q="Am deja abonament anual plătit la o altă sală. Cum pot să beneficiez de oferta All Inclusive acum fără să o pierd dacă am abonament altundeva?">
                   <>
@@ -359,6 +410,14 @@ export default function FitActivePresale() {
             </div>
           </footer>
         </div>
+
+        {selectedImage && (
+          <ImageModal
+            src={selectedImage.src}
+            alt={selectedImage.alt}
+            onClose={() => setSelectedImage(null)}
+          />
+        )}
 
       </div>
     </div>

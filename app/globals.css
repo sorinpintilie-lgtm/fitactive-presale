@@ -129,3 +129,7 @@ button, a {
 .animate-slideInUp {
   animation: slideInUp 0.6s ease-out forwards;
 }
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
