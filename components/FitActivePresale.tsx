@@ -112,22 +112,7 @@ export default function FitActivePresale() {
                   <Badge>Pro‑Pack cadou</Badge>
                 </div>
               </div>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-neutral-700 animate-slideInUp" style={{ animationDelay: "0.1s" }}>
-                <div className="absolute inset-0 bg-gradient-to-tr from-neutral-900 via-neutral-800 to-neutral-900" />
-                <div className="absolute inset-0 grid place-items-center">
-                  <span className="text-sm text-neutral-500 text-center px-4">Video/Fotografie sală — atmosferă luminoasă, oameni zâmbind</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="border-t border-neutral-800 bg-neutral-950/50">
-            <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
-              <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold md:text-4xl">Descoperă FitActive Vitan</h2>
-                <p className="mt-3 text-neutral-400">Aruncă o privire în interiorul sălii noastre moderne</p>
-              </div>
-              <div className="relative aspect-video w-full overflow-hidden rounded-2xl ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 animate-slideInUp">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 animate-slideInUp" style={{ animationDelay: "0.1s" }}>
                 <video
                   className="w-full h-full object-cover"
                   controls
