@@ -220,7 +220,7 @@ export default function FitActivePresale() {
                 {gymImages.map((image, i) => (
                   <div
                     key={i}
-                    className="aspect-[4/3] overflow-hidden rounded-xl bg-neutral-900 ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 hover:scale-105 cursor-pointer"
+                    className="aspect-[9/16] overflow-hidden rounded-xl bg-neutral-900 ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 hover:scale-105 cursor-pointer"
                     onClick={() => setSelectedImage(image)}
                   >
                     <img
