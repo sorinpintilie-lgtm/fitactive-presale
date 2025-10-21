@@ -122,6 +122,27 @@ export default function FitActivePresale() {
           </section>
 
           <section className="border-t border-neutral-800 bg-neutral-950/50">
+            <div className="mx-auto max-w-6xl px-4 py-12 md:py-20">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl font-bold md:text-4xl">Descoperă FitActive Vitan</h2>
+                <p className="mt-3 text-neutral-400">Aruncă o privire în interiorul sălii noastre moderne</p>
+              </div>
+              <div className="relative aspect-video w-full overflow-hidden rounded-2xl ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 animate-slideInUp">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23171717' width='1920' height='1080'/%3E%3C/svg%3E"
+                >
+                  <source src="/VIDEO PT LANDING.MOV" type="video/quicktime" />
+                  <source src="/VIDEO PT LANDING.MOV" type="video/mp4" />
+                  Browserul tău nu suportă redarea video.
+                </video>
+              </div>
+            </div>
+          </section>
+
+          <section className="border-t border-neutral-800 bg-neutral-950/50">
             <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-12 md:grid-cols-2 md:py-20">
               <div className="animate-slideInUp">
                 <h2 className="text-3xl font-bold md:text-4xl">Un singur abonament. Totul inclus.</h2>
