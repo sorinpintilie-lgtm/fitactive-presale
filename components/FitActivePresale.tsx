@@ -245,7 +245,7 @@ export default function FitActivePresale() {
                 <h2 className="text-3xl font-bold md:text-4xl">Ne găsești ușor</h2>
                 <p className="mt-3 text-neutral-400">📍 Calea Vitan nr. 289, sector 3, București (aproape de Auchan Vitan)</p>
                 <a
-                  href="https://maps.google.com/?q=Calea+Vitan+289+Bucuresti"
+                  href="https://www.google.com/maps/place/FITACTIVE+Vitan+-+București/@44.4057649,26.1399223,805m/data=!3m2!1e3!4b1!4m6!3m5!1s0x40b1ff9eef1436f7:0xd22a1933c5407872!8m2!3d44.4057611!4d26.1424972!16s%2Fg%2F11vy14t96m?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noreferrer"
                   className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[var(--brand)] px-6 py-3 text-white font-semibold hover:bg-[var(--brand-dark)] transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95"
@@ -255,7 +255,7 @@ export default function FitActivePresale() {
               </div>
               <div className="aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 animate-slideInUp" style={{ animationDelay: "0.1s" }}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.8!2d26.1458!3d44.4058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDI0JzIwLjkiTiAyNsKwMDgnNDQuOSJF!5e0!3m2!1sen!2sro!4v1234567890!5m2!1sen!2sro&q=Calea+Vitan+289,+București"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.5!2d26.1424972!3d44.4057611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff9eef1436f7%3A0xd22a1933c5407872!2sFITACTIVE%20Vitan%20-%20Bucure%C8%99ti!5e0!3m2!1sen!2sro!4v1234567890!5m2!1sen!2sro"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
