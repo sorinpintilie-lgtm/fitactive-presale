@@ -112,15 +112,18 @@ export default function FitActivePresale() {
                   <Badge>Pro‑Pack cadou</Badge>
                 </div>
               </div>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 animate-slideInUp" style={{ animationDelay: "0.1s" }}>
+              <div className="relative aspect-[9/16] w-full md:w-[80%] mx-auto overflow-hidden rounded-2xl ring-1 ring-neutral-700 hover:ring-[var(--brand)] transition-all duration-300 animate-slideInUp" style={{ animationDelay: "0.1s" }}>
                 <video
                   className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   controls
-                  preload="metadata"
-                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23171717' width='1920' height='1080'/%3E%3C/svg%3E"
+                  preload="auto"
                 >
-                  <source src="/VIDEO PT LANDING.MOV" type="video/quicktime" />
-                  <source src="/VIDEO PT LANDING.MOV" type="video/mp4" />
+                  <source src="/video-landing.mov" type="video/quicktime" />
+                  <source src="/video-landing.mov" type="video/mp4" />
                   Browserul tău nu suportă redarea video.
                 </video>
               </div>
